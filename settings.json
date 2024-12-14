@@ -1,0 +1,130 @@
+// Zed settings
+//
+// For information on how to configure Zed, see the Zed
+// documentation: https://zed.dev/docs/configuring-zed
+//
+// To see all of Zed's default settings without changing your
+// custom settings, run the `open default settings` command
+// from the command palette or from `Zed` application menu.
+{
+  "assistant": {
+    "default_model": {
+      "provider": "copilot_chat",
+      "model": "gpt-4"
+    },
+    "version": "2"
+  },
+  "theme": "One Dark",
+  "vim_mode": true,
+  "ui_font_size": 16,
+  "buffer_font_size": 16,
+  "autosave": "off",
+  // 启用文件保存时自动格式化功能
+  "format_on_save": "on",
+  // 用户界面（UI）中的字体样式
+  "ui_font_family": "JetBrainsMono Nerd Font",
+  // 代码编辑区（Buffer）的字体样式
+  "buffer_font_family": "JetBrainsMono Nerd Font",
+  // 启用文件图标显示，在标签页中显示文件类型对应的图标
+  // 在标签页中显示文件的 Git 状态
+  "tabs": {
+    "file_icons": true,
+    "git_status": true
+  },
+  "terminal": {
+    "font_family": "JetBrainsMono Nerd Font",
+    "toolbar": {
+      "title": false
+    },
+    // 启用在终端中选择文本时自动复制到剪贴板的功能
+    "copy_on_select": false
+  },
+  "git": {
+    // 启用 Git 集成功能
+    "enabled": true,
+    // 定期从远程仓库获取最新的更改
+    "autoFetch": false,
+    // 设置自动获取的时间间隔为 300 秒（5分钟）
+    "autoFetchInterval": 300,
+    // 当编辑器窗口获得焦点时自动获取最新的 Git 更改
+    "autoFetchOnFocus": false,
+    // 当编辑器窗口切换时自动获取最新的 Git 更改
+    "autoFetchOnWindowChange": false,
+    // 在构建项目时自动获取最新的 Git 更改
+    "autoFetchOnBuild": false,
+    // 在编辑器中显示文件的 Git 状态
+    "git_status": true,
+    // 在指定的构建事件（如构建、运行、调试）时自动获取最新的Git更改
+    "autoFetchOnBuildEvents": ["build", "run", "debug"],
+    // 设置在构建事件发生后延迟 1500 毫秒（1.5秒）再进行自动获取
+    "autoFetchOnBuildEventsDelay": 1500,
+    // 设置在构建后延迟 1500 毫秒（1.5秒）再进行自动获取
+    "autoFetchOnBuildDelay": 1500,
+    // 在编辑器的行号栏（gutter）中显示 Git 状态，仅显示已跟踪文件的状态
+    "git_gutter": "tracked_files",
+    // ，在代码行旁边显示最后一次修改该行的提交信息
+    "inline_blame": {
+      "enabled": false,
+      "position": "right"
+    }
+  },
+  "languages": {
+    "Go": {
+      "code_actions_on_format": {
+        "source.organizeImports": true
+      }
+    },
+    "Rust": {
+      "tab_size": 2
+    }
+  },
+  // 语法分析
+  "lsp": {
+    "rust-analyzer": {
+      "initialization_options": {
+        "checkOnSave": {
+          // rust-analyzer.check.command (default: "check")
+          // "command": "clippy"
+        }
+      }
+    }
+  },
+  // 文件扫描时要排除的文件和目录模式
+  "file_scan_exclusions": [
+    "**/.git",
+    "**/.svn",
+    "**/.hg",
+    "**/CVS",
+    "**/.DS_Store",
+    "**/Thumbs.db",
+    "**/.classpath",
+    "**/.settings",
+    "**/vendor",
+    "**/.tmp*"
+  ],
+  // 搜索时要排除的文件和目录
+  "search.exclude": {
+    "**/*.snap": true,
+    "**/.git": true,
+    "**/.github": false,
+    "**/.nuxt": true,
+    "**/.output": true,
+    "**/.pnpm": true,
+    "**/.vscode": true,
+    "**/target/**": true,
+    "**/.yarn": true,
+    "**/node_modules": true,
+    "**/out/**": true,
+    "**/package-lock.json": true,
+    "**/pnpm-lock.yaml": true,
+    "**/temp": true,
+    "**/yarn.lock": true,
+    "**/CHANGELOG*": true,
+    "**/LICENSE*": true
+  },
+  // 不允许 Zed Industries 收集匿名使用数据~
+  "telemetry": {
+    "diagnostics": false,
+    "metrics": false
+  }
+}
