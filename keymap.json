@@ -12,12 +12,19 @@
       // "shift shift": "file_finder::Toggle"
     }
   },
-  // 左右 buffer 切换
   {
-    "context": "Editor",
+    "context": "Editor && vim_mode == normal",
     "bindings": {
+      // 左右 buffer 切换
       "[ b": "pane::ActivatePrevItem",
-      "] b": "pane::ActivateNextItem"
+      "] b": "pane::ActivateNextItem",
+      // 代码跳转
+      "g r": "editor::GoToTypeDefinition",
+      "g i": "editor::GoToImplementation",
+      "space c f": "editor::Format",
+      "space c r": "editor::Rename",
+      "space c o": "outline::Toggle",
+      "space e": "project_panel::ToggleFocus"
     }
   },
   // 窗口切换

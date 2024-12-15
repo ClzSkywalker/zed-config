@@ -75,7 +75,12 @@
       }
     },
     "Rust": {
-      "tab_size": 2
+      "code_actions_on_format": {
+        "source.organizeImports": true
+      }
+    },
+    "Markdown": {
+      "format_on_save": "on"
     }
   },
   // 语法分析
