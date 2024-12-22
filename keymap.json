@@ -16,8 +16,8 @@
     "context": "Editor && vim_mode == normal",
     "bindings": {
       // 左右 buffer 切换
-      "[ b": "pane::ActivatePrevItem",
-      "] b": "pane::ActivateNextItem",
+      "H": "pane::ActivatePrevItem",
+      "L": "pane::ActivateNextItem",
       // 代码跳转
       "g r": "editor::GoToTypeDefinition",
       "g i": "editor::GoToImplementation",
@@ -29,7 +29,7 @@
   },
   // 窗口切换
   {
-    "context": "Dock || Terminal || Editor",
+    "context": "Dock || Terminal || (Editor && vim_mode == normal)",
     "bindings": {
       "ctrl-h": ["workspace::ActivatePaneInDirection", "Left"],
       "ctrl-l": ["workspace::ActivatePaneInDirection", "Right"],
