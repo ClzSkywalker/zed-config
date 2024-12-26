@@ -31,6 +31,8 @@
   {
     "context": "Dock || Terminal || (Editor && vim_mode == normal)",
     "bindings": {
+      "alt-j": "workspace::NewTerminal",
+      "ctrl-w": "pane::CloseActiveItem",
       "ctrl-h": ["workspace::ActivatePaneInDirection", "Left"],
       "ctrl-l": ["workspace::ActivatePaneInDirection", "Right"],
       "ctrl-k": ["workspace::ActivatePaneInDirection", "Up"],
